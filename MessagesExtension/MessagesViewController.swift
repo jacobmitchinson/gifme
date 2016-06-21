@@ -16,14 +16,31 @@ class MessagesViewController: MSMessagesAppViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        self.imageView.image = UIImage.gifWithURL(gifUrl: "http://media0.giphy.com//media//bv8PkT4r22NW0//giphy.gif")
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func didSelectGif()
+    {
+        //JAKES API WILL GIVE A URL
+        guard let url:URL? = URL(string: "http://media0.giphy.com//media//bv8PkT4r22NW0//giphy.gif") else
+        {
+            return
+        }
+        
+        //save the gif and get the file path
+        guard let filePath = FileUtils.saveGifToFile(url: url) else
+        {
+            return
+        }
+        
+        //send the gif!!!!!
+        self.activeConversation?.insertAttachment(URL(fileURLWithPath: filePath), withAlternateFilename: "", completionHandler: {error in })
+
+        //TODO: delete GIF!
     }
     
     // MARK: - Conversation Handling
@@ -54,6 +71,7 @@ class MessagesViewController: MSMessagesAppViewController {
     
     override func didStartSending(_ message: MSMessage, conversation: MSConversation) {
         // Called when the user taps the send button.
+        
     }
     
     override func didCancelSending(_ message: MSMessage, conversation: MSConversation) {

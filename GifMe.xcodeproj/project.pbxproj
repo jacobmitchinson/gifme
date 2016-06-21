@@ -15,6 +15,9 @@
 		1D7D5FF71D1953EC0046BF8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D5FF61D1953EC0046BF8A /* Assets.xcassets */; };
 		1D7D60431D1960540046BF8A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D60421D1960540046BF8A /* WebService.swift */; };
 		1D7D60451D196CE90046BF8A /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D60441D196CE90046BF8A /* UIImage+Gif.swift */; };
+		1D7D60471D1982200046BF8A /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D60461D1982200046BF8A /* giphy.gif */; };
+		1D7D60481D1982200046BF8A /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D60461D1982200046BF8A /* giphy.gif */; };
+		1D7D604A1D19920A0046BF8A /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D60491D19920A0046BF8A /* FileUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,8 @@
 		1D7D5FF81D1953EC0046BF8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D7D60421D1960540046BF8A /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		1D7D60441D196CE90046BF8A /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		1D7D60461D1982200046BF8A /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = giphy.gif; path = ../../giphy.gif; sourceTree = "<group>"; };
+		1D7D60491D19920A0046BF8A /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +94,10 @@
 		1D7D5FE11D1953EB0046BF8A /* GifMe */ = {
 			isa = PBXGroup;
 			children = (
+				1D7D60461D1982200046BF8A /* giphy.gif */,
 				1D7D5FE21D1953EB0046BF8A /* Assets.xcassets */,
 				1D7D5FE41D1953EB0046BF8A /* Info.plist */,
+				1D7D60491D19920A0046BF8A /* FileUtils.swift */,
 			);
 			path = GifMe;
 			sourceTree = "<group>";
@@ -201,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7D60471D1982200046BF8A /* giphy.gif in Resources */,
 				1D7D5FE31D1953EB0046BF8A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7D5FF71D1953EC0046BF8A /* Assets.xcassets in Resources */,
+				1D7D60481D1982200046BF8A /* giphy.gif in Resources */,
 				1D7D5FF51D1953EC0046BF8A /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +233,7 @@
 				1D7D60451D196CE90046BF8A /* UIImage+Gif.swift in Sources */,
 				1D7D60431D1960540046BF8A /* WebService.swift in Sources */,
 				1D7D5FF21D1953EC0046BF8A /* MessagesViewController.swift in Sources */,
+				1D7D604A1D19920A0046BF8A /* FileUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
