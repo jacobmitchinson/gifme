@@ -14,6 +14,7 @@
 		1D7D5FF51D1953EC0046BF8A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D5FF31D1953EC0046BF8A /* MainInterface.storyboard */; };
 		1D7D5FF71D1953EC0046BF8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D5FF61D1953EC0046BF8A /* Assets.xcassets */; };
 		1D7D60431D1960540046BF8A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D60421D1960540046BF8A /* WebService.swift */; };
+		1D7D60451D196CE90046BF8A /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D60441D196CE90046BF8A /* UIImage+Gif.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1D7D5FF61D1953EC0046BF8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D7D5FF81D1953EC0046BF8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D7D60421D1960540046BF8A /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		1D7D60441D196CE90046BF8A /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				1D7D5FF11D1953EC0046BF8A /* MessagesViewController.swift */,
 				1D7D5FF31D1953EC0046BF8A /* MainInterface.storyboard */,
+				1D7D60441D196CE90046BF8A /* UIImage+Gif.swift */,
 				1D7D5FF61D1953EC0046BF8A /* Assets.xcassets */,
 				1D7D5FF81D1953EC0046BF8A /* Info.plist */,
 				1D7D60421D1960540046BF8A /* WebService.swift */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7D60451D196CE90046BF8A /* UIImage+Gif.swift in Sources */,
 				1D7D60431D1960540046BF8A /* WebService.swift in Sources */,
 				1D7D5FF21D1953EC0046BF8A /* MessagesViewController.swift in Sources */,
 			);

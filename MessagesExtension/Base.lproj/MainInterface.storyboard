@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,13 +18,37 @@
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.038562041630000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2sW-37-cRK"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Giff Me!!!!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ood-mx-zqA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6kr-w8-LFg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ood-mx-zqA" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" constant="20" id="VNd-9F-ySL"/>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="2sW-37-cRK" secondAttribute="bottom" constant="10" id="Vfh-II-ibj"/>
+                            <constraint firstItem="2sW-37-cRK" firstAttribute="top" secondItem="ood-mx-zqA" secondAttribute="bottom" constant="10" id="a13-6B-vOz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2sW-37-cRK" secondAttribute="trailing" id="dVs-8y-m7z"/>
+                            <constraint firstItem="ood-mx-zqA" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" id="pT8-sU-0Vw"/>
+                            <constraint firstItem="2sW-37-cRK" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" id="rff-RE-cA1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ood-mx-zqA" secondAttribute="trailing" id="wod-nd-wda"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="imageView" destination="2sW-37-cRK" id="liZ-IE-uzN"/>
+                        <outlet property="searchTextField" destination="ood-mx-zqA" id="Ln0-Wz-kbS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33.600000000000001" y="37.781109445277366"/>
         </scene>
     </scenes>
 </document>

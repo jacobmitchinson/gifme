@@ -11,7 +11,7 @@ import Foundation
 
 struct WebService {
     
-    func giphy(searchText: String)
+    static func giphy(searchText: String)
     {
         guard let url = URL(string: "http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC") else
         {
@@ -29,6 +29,9 @@ struct WebService {
             }
             
             do {
+                
+                print("About to parse JSON")
+                
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 print("JSON : \(json)")
                 

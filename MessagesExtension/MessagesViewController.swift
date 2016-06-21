@@ -11,10 +11,14 @@ import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var searchTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-   
+        
+        self.imageView.image = UIImage.gifWithURL(gifUrl: "http://media0.giphy.com//media//bv8PkT4r22NW0//giphy.gif")
     }
     
     override func didReceiveMemoryWarning() {
