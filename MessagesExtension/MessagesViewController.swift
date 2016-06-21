@@ -25,14 +25,19 @@ class MessagesViewController: MSMessagesAppViewController {
     
     @IBAction func didSelectGif()
     {
-        GifStore().fetchWithSearchText(text: "funny cat") { (gifResult) -> Void in
+        guard let searchText = self.searchTextField.text else
+        {
+            return
+        }
+        
+        GifStore().fetchWithSearchText(text: searchText) { (gifResult) -> Void in
             switch gifResult {
             case let .Success(gifs):
                 print(gifs)
                 
                 let url = gifs.first?.url
                 //save the gif and get the file path
-                guard let filePath = FileUtils.saveGifToFile(url: url) else
+                guard let filePath = FileUtils.saveGif(url: url) else
                 {
                     return
                 }
@@ -41,6 +46,10 @@ class MessagesViewController: MSMessagesAppViewController {
                 self.activeConversation?.insertAttachment(URL(fileURLWithPath: filePath), withAlternateFilename: "", completionHandler: {error in })
                 
             //TODO: delete GIF!
+                
+                FileUtils.deleteGif(filePath: filePath)
+                
+                
             case let .Failure(error):
                 print(error)
             }

@@ -10,7 +10,7 @@ import Foundation
 
 struct FileUtils {
     
-    static func saveGifToFile(url: URL?) -> String?
+    static func saveGif(url: URL?) -> String?
     {
         guard let url = url else
         {
@@ -26,5 +26,24 @@ struct FileUtils {
         gifData.write(to: URL(fileURLWithPath: filePath), atomically: true)
         
         return filePath
+    }
+    
+    static func deleteGif(filePath:String?)
+    {
+        guard let filePath = filePath else
+        {
+            return
+        }
+        
+        let fileManager = FileManager()
+        do{
+            let filePathURL = URL(string: filePath)
+           try fileManager.removeItem(at: filePathURL!)
+            print("Successfully deleted file at path :\n \(filePath)")
+        }
+        catch
+        {
+            print("Could not delete file at path :\n \(filePath)")
+        }
     }
 }
